@@ -1,0 +1,70 @@
+{
+  "name": "dm-gulp-task",
+  "version": "0.1.1",
+  "description": "Base framework foundation with gulp",
+  "main": "gulpfile.js",
+  "private": true,
+  "browser": {
+    "modernizr": "./bower-components/modernizr/modernizr.js",
+    "foundation": "./node_modules/foundation-sites/js/foundation.js",
+    "Chart": "./assets/lib/Chart.js"
+  },
+  "browserify-shim": {
+    "modernizr": "Modernizr",
+    "jquery": "global:$",
+    "foundation": "foundation",
+    "chart": "Chart"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "devDependencies": {
+    "browser-sync": "*",
+    "browserify": "^11.0.0",
+    "browserify-shim": "^3.8.10",
+    "del": "*",
+    "gulp": "3.9.0",
+    "gulp-autoprefixer": "*",
+    "gulp-bower-files": "^0.2.7",
+    "gulp-changed": "*",
+    "gulp-concat": "*",
+    "gulp-csso": "^1.0.0",
+    "gulp-filter": "^3.0.0",
+    "gulp-if": "*",
+    "gulp-imagemin": "*",
+    "gulp-jshint": "*",
+    "gulp-load-plugins": "*",
+    "gulp-minify-css": "*",
+    "gulp-newer": "*",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-ruby-sass": "^1.0.5",
+    "gulp-sass": "^2.0.4",
+    "gulp-sass-bulk-import": "^0.3.2",
+    "gulp-size": "^2.0.0",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.3.3",
+    "jshint-stylish": "*",
+    "main-bower-files": "^2.9.0",
+    "pretty-hrtime": "^1.0.0",
+    "require-dir": "^0.3.0",
+    "run-sequence": "*",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.3.0"
+  },
+  "scripts": {
+    "postinstall": "bower install;",
+    "start": "gulp",
+    "sever": "gulp serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "foundation-sites": "^5.5.2"
+  }
+}
